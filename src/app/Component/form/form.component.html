@@ -1,0 +1,21 @@
+<h1>Crud opration</h1>
+
+<div class="container">
+<form #myForm="ngForm" (ngSubmit)="onSubmit()" >
+  <input type="text" name="name" [(ngModel)]="dataname"   required>
+  <button type="submit" class="btn">Add </button>
+  </form>
+</div>
+<section>
+  <div *ngFor="let data of  cruddata let i=index" class="container2">
+    <div>{{data}} </div>
+    <div>
+       <button (click)="remove(data)" class="btn">Delete</button>
+      <button (click)="edit(i)" class="btn">Edit</button>
+    </div>
+
+  </div>
+</section>
+
+
+
