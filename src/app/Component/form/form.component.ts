@@ -23,7 +23,8 @@ export class FormComponent implements OnInit{
       console.log(this.dataname)
      let b= this.cruddata.indexOf(this.dataname);
     (this.dataname.length<=0)?alert("Enter Value"):(this.isEdit!=false)? this.myservice.update(this.indexp,this.dataname):this.myservice.addItem(this.dataname)
-    }
+    this.dataname="";
+  }
     remove(data:string){
       this.myservice.remove(this.cruddata.indexOf(data))
     }
