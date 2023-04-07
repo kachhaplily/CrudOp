@@ -5,26 +5,26 @@ import { Injectable } from '@angular/core';
 })
 export class MycrudserviceService {
 
-   items: string[] = [];
+  items: string[] = [];
 
 
-  constructor( ) {
+  constructor() {
 
-   }
-   addItem(item:string) {
+  }
+  addItem(item: string) {
     this.items.push(item);
   }
-  getdata(){
+  getdata() {
     return this.items
   }
-  remove(index:number){
-    this.items.splice(index,1)
+  remove(index: number) {
+    this.items.splice(index, 1)
   }
 
-  update(lily:number,newItem: string){
-      console.log(lily)
-      this.items[lily] = newItem;
+  update(index: number, newItem: string) {
+    console.log(index)
+    this.items[index] = newItem;
 
-    }
+  }
 
 }

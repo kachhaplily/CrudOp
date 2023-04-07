@@ -1,15 +1,12 @@
 <h1>Crud opration</h1>
 
 <div class="container">
-<form #myForm="ngForm" (ngSubmit)="onSubmit()" >
+<form  (ngSubmit)="onSubmit()" >
   <mat-form-field>
-    <input type="text" matInput placeholder="Enter your name" name="name" [(ngModel)]="dataname"   required>
+    <input type="text" matInput placeholder=" Your title" name="name" [(ngModel)]="dataname"   required>
 
   </mat-form-field>
   <button type="submit" class="btn"><mat-icon>add</mat-icon></button>
-
-
-
   </form>
 </div>
 <section>
